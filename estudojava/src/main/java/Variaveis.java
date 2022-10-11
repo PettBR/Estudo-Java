@@ -70,5 +70,6 @@ public class Variaveis {
         boolean teste10 = (10 >= 0) || (1 < 5); // true
         boolean teste11 = (5 > 1); // true
         boolean teste12 = !teste11; // false (! = operador not)
+
     }
 }
