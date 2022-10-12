@@ -25,7 +25,7 @@ public class Variaveis {
 
         int soma = a + b; // 15
         int subtracao = a - b; // 5
-        int mutiplicacao = a* b; // 50
+        int mutiplicacao = a * b; // 50
         int divisao = a / b; // 2
 
         System.out.println("O resultado da soma é " + soma);
