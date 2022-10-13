@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Listona64Exercicio13 {
@@ -8,15 +10,19 @@ public class Listona64Exercicio13 {
 
         int[] numerosArray = new int[3];
         System.out.println("Digite o primeiro número: ");
-        int numeroA = entrada.nextInt();
+        numerosArray[0] = entrada.nextInt();
 
         System.out.println("Digite o segundo número: ");
-        int numeroB = entrada.nextInt();
+        numerosArray[1] = entrada.nextInt();
 
         System.out.println("Digite o terceiro número: ");
-        int numeroC = entrada.nextInt();
+        numerosArray[2] = entrada.nextInt();
 
         // Ordenar números:
-        // duplo for ou varios if else
+        // duplo for ou varios if else ou esse método importando o Arrays com o método sort para organizar:
+        Arrays.sort(numerosArray);
+        System.out.println("Os números em ordem crescente são: ");
+        System.out.println(Arrays.toString(numerosArray));
+
     }
 }
