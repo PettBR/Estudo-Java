@@ -19,8 +19,9 @@ public class EstudoEnums {
         System.out.println(hoje);
 
         enum NivelDev{ JUNIOR, PLENO, SENIOR }
-        NivelDev nivel; // Null
+        NivelDev nivelNulo; // Null
         NivelDev nivel = NivelDev.PLENO;
+        NivelDev nivel2 = NivelDev.valueOf("JUNIOR"); // o valor de name precisa ser JUNIOR, PLENO, SENIOR
 
         switch (nivel){
             case JUNIOR:
