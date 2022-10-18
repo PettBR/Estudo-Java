@@ -33,5 +33,15 @@ public class PessoaTeste {
 
         pessoa4.comer("Batata");
 
+        // Exemplo pessoas
+        Pessoa pedro = new Pessoa("Pedro","José", 29, 1.8,80);
+
+        Pessoa joao = new Pessoa("João","Carlos", 30, 1.75, 90);
+
+        // pedro.addPessoaNova(joao);  → como privei o método addPessoaNova não vai mais poder pular a etapa de se conhecer
+        pedro.cumprimentar(joao); // Primeira vez eles vão se conhecer também pelo método que fiz
+        pedro.cumprimentar(joao); // Segunda vez só tem o cumprimento
+        pedro.comer("Batata");
+
     }
 }

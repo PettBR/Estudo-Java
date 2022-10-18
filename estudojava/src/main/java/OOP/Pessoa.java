@@ -1,5 +1,7 @@
 package OOP;
 
+import java.util.ArrayList;
+
 public class Pessoa {
     // Propriedades/atributos de uma Pessoa
     String nome;
@@ -7,6 +9,8 @@ public class Pessoa {
     int idade;
     double altura;
     double peso;
+
+    ArrayList<Pessoa> conhecidos = new ArrayList<>();
 
     Pessoa() { // construtor da classe
         // this → representa o objeto
@@ -23,6 +27,7 @@ public class Pessoa {
         this.idade = idade;
         this.altura = altura;
         this.peso = peso;
+        this.dizOla();
     }
 
     // Criando por exemplo um construtor de Pessoa recém-nascida
@@ -39,8 +44,8 @@ public class Pessoa {
 
     // Ações de uma Pessoa
     // <tipo_retorno> nomeDoMetodo(PARAMETROS) {}
-    void dizOla() { //método que não retorna nada
-        System.out.println("Olá, tudo bem?");
+    void dizOla() { // método que não retorna nada
+        System.out.println("Olá, tudo bem?\nMeu nome é: " + this.nome);
     }
 
     void mostrarImc() {
@@ -58,5 +63,25 @@ public class Pessoa {
         this.peso += 1.5;
     }
 
+    void cumprimentar(Pessoa pessoa) {
+        this.dizOla();
+        pessoa.dizOla();
+
+        if (!this.conhecePessoa(pessoa)) {
+            this.addPessoaNova(pessoa);
+            pessoa.conhecePessoa(this); // this é o objeto que chama cumprimentar()
+        }
+    }
+
+    private void addPessoaNova(Pessoa pessoa) { // faz o objeto "conhecer"
+        System.out.println(this.nome + " conheceu " + pessoa.nome + "!!!");
+        this.conhecidos.add(pessoa);
+    }
+
+    boolean conhecePessoa(Pessoa pessoa) {
+        // se true, a pessoa (this) conhece outra pessoa
+        // se false, não conhece
+        return this.conhecidos.contains(pessoa);
+    }
 
 }
