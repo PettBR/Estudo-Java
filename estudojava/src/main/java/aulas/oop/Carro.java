@@ -1,4 +1,4 @@
-package OOP;
+package aulas.oop;
 
 public class Carro {
     String modelo;

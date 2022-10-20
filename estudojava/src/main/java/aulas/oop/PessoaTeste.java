@@ -1,4 +1,4 @@
-package OOP;
+package aulas.oop;
 
 // intuito: testar o uso da classe Pessoa
 public class PessoaTeste {

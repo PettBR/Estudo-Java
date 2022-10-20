@@ -1,4 +1,4 @@
-package OOP;
+package aulas.oop;
 
 // sub-classe/classe filha
 public class Cachorro extends Pet {

@@ -1,4 +1,4 @@
-package OOP;
+package aulas.oop;
 
 // super classe
 public class Pet {
